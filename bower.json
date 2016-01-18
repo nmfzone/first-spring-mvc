@@ -1,0 +1,22 @@
+{
+  "name": "SpringMVC",
+  "version": "0.2.0",
+  "authors": [
+    "nmfzone <nabilftd@gmail.com>"
+  ],
+  "description": "SpringMVC Assets Dependencies",
+  "keywords": [
+    "SpringMVC"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "src/main/resources/static/assets/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4"
+  }
+}

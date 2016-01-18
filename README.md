@@ -11,13 +11,15 @@ My First Web Applications using Java Spring + Hibernate + Gradle
 ```
     1.  Clone this repository (i assume you know a little bit about git workflow)
     2.  Setting up the database in `src/main/java/com/nmfzone/app/config/App.java`
-    3.  Run `gradle bootRun` or `./gradlew bootRun`
-    4.  Goto http://localhost:8080
+    3.  Run `bower update`
+    4.  Run `gradle bootRun` or `./gradlew bootRun`
+    5.  Goto http://localhost:8080
 ```
 
 ### Development
 ```
     1.  Clone this repository (i assume you know a little bit about git workflow)
+    2.  Run `bower update`
     2.  Run `gradle -t classes` (Tricks so you can use continous build)
     3.  Open another terminal, run `gradle bootRun` or `./gradlew bootRun`
 ```
@@ -31,7 +33,8 @@ My First Web Applications using Java Spring + Hibernate + Gradle
     5.  spring-boot-starter-thymeleaf (Templating)
     6.  spring-boot-starter-data-jpa (Java Persistence API)
     7.  SpringLoaded (Continous Build)
-    8.  JUnit (Unit Testing)
+    8.  Bower (Assets Dependencies)
+    9.  JUnit (Unit Testing)
 ```
 
 ### License
