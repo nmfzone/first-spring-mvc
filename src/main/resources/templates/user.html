@@ -2,13 +2,24 @@
 <html xmlns:th="http://www.thymeleaf.org">
     <head>
         <title th:text="${title}"></title>
+        <link href="/bootstrap.min.css" type="text/css" rel="stylesheet" />
     </head>
     <body>
-      <h3>Save User Data</h3>
-      <form action="user/save" method="post">
-          User Name : <input type="text" name="userName" /> <br/>
-          Age : <input type="text" name="age" /><br/>
-          <input type="submit" value="Submit" />
-      </form>
+        <h3>Save User Data</h3>
+        <form action="user/save" method="post" class="form-horizontal">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" name="userName" />
+            </div>
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="text" class="form-control" name="age" />
+            </div>
+            <div class="form-group">
+                <div class="col-xs-offset-2 col-xs-10">
+                    <button type="submit" class="btn btn-primary">Add User</button>
+                </div>
+            </div>
+        </form>
     </body>
 </html>

@@ -1,5 +1,4 @@
 .gradle
 .project
-build
-gradle
 .classpath
+build
