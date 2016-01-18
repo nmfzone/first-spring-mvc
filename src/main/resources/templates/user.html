@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title th:text="${title}"></title>
+    </head>
+    <body>
+      <h3>Save User Data</h3>
+      <form action="user/save" method="post">
+          User Name : <input type="text" name="userName" /> <br/>
+          Age : <input type="text" name="age" /><br/>
+          <input type="submit" value="Submit" />
+      </form>
+    </body>
+</html>
