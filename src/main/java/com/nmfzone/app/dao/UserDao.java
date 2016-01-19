@@ -1,24 +1,47 @@
 package com.nmfzone.app.dao;
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
+import java.util.List;
 
+import org.hibernate.Criteria;
+import org.hibernate.Query;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 
 import com.nmfzone.app.model.User;
 
-@Repository
-@Transactional(readOnly = false)
-public class UserDao
+@Repository("userDao")
+public class UserDao extends AbstractDao implements IUserDao
 {
 
-    @PersistenceContext
-    EntityManager entityManager;
-    public void saveUserDetail(User user)
+    public void saveUser(User user)
     {
-        entityManager.persist(user);
-        System.out.println("--Data Saved--");
-    }
+		persist(user);
+	}
+
+	@SuppressWarnings("unchecked")
+	public List<User> getAllUser()
+    {
+		Criteria criteria = getSession().createCriteria(User.class);
+		return (List<User>) criteria.list();
+	}
+
+	public void deleteUserById(String id)
+    {
+		Query query = getSession().createSQLQuery("delete from user where id = :id");
+		query.setString("id", id);
+		query.executeUpdate();
+	}
+
+	public User findById(String id)
+    {
+		Criteria criteria = getSession().createCriteria(User.class);
+		criteria.add(Restrictions.eq("id", id));
+		return (User) criteria.uniqueResult();
+	}
+
+	public void updateUser(User user)
+    {
+		getSession().update(user);
+	}
 
 }

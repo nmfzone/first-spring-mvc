@@ -10,6 +10,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class HomeController {
 
+    @RequestMapping("/")
+    public String index()
+    {
+        return "home";
+    }
+
     @RequestMapping("/home")
     public String greeting(@RequestParam(value="name", required=false, defaultValue="World") String name, Model model)
     {

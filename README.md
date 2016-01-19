@@ -8,25 +8,20 @@ My First Web Applications using Java Spring + Hibernate + Gradle
 ```
 
 ### How to use
-```
     1.  Clone this repository (i assume you know a little bit about git workflow)
-    2.  Setting up the database in `src/main/java/com/nmfzone/app/config/App.java`
+    2.  Setting up the database in `src/main/resources/application.properties`
     3.  Run `bower update`
     4.  Run `gradle bootRun` or `./gradlew bootRun`
     5.  Goto http://localhost:8080
-```
 
 ### Development
-```
     1.  Clone this repository (i assume you know a little bit about git workflow)
     2.  Run `bower update`
     2.  Run `gradle -t classes` (Tricks so you can use continous build)
     3.  Open another terminal, run `gradle bootRun` or `./gradlew bootRun`
-```
 
 ### Build with
-```
-    1.  Java Programming Languages
+    1.  Java Programming Language
     2.  Spring Java Web Framework
     3.  Hibernate (ORM Database)
     4.  Gradle
@@ -35,7 +30,6 @@ My First Web Applications using Java Spring + Hibernate + Gradle
     7.  SpringLoaded (Continous Build)
     8.  Bower (Assets Dependencies)
     9.  JUnit (Unit Testing)
-```
 
 ### License
 
