@@ -9,6 +9,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.NotEmpty;
+
 @Table(name="user")
 @Entity
 public class User implements Serializable
@@ -20,8 +24,12 @@ public class User implements Serializable
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="id")
 	private int id;
+
+	@NotEmpty
 	@Column(name="name")
 	private String name;
+
+	@NotNull
 	@Column(name="age")
 	private int age;
 
@@ -63,5 +71,11 @@ public class User implements Serializable
 	{
 		this.age = age;
 	}
+
+	// @Override
+	// public String toString()
+	// {
+	// 	return "User [id=" + id + ", name=" + name + ", age=" + age + "]";
+	// }
 
 }

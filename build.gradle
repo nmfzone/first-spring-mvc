@@ -26,8 +26,8 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 ext {
-    springVersion = '3.1.2.RELEASE'
-    hibernateVersion = '4.3.6.Final'
+    hibernateVersion = '5.0.7.Final'
+    hibernateValidatorVersion = '5.2.1.Final'
 }
 
 repositories {
@@ -40,11 +40,11 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-thymeleaf')
     compile('org.springframework.boot:spring-boot-starter-data-jpa')
 
-	// Hibernate
-    compile("org.hibernate:hibernate-core:$hibernateVersion")
-
     compile('mysql:mysql-connector-java:5.1.31')
     compile('commons-dbcp:commons-dbcp:1.4')
+
+    // Debugging
+    compile('com.google.code.gson:gson:2.4')
 
     // Unit testing
     testCompile('junit:junit')
