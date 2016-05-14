@@ -1,0 +1,44 @@
+spring:
+  profiles.active: development
+---
+spring:
+  profiles: development
+
+  thymeleaf:
+    cache: false
+
+config:
+  server:
+    host: localhost
+    port: 8080
+  database:
+    name: spring_db
+    username: root
+    password:
+    driver: com.mysql.jdbc.Driver
+    hibernate:
+      dialect: org.hibernate.dialect.MySQLDialect
+      hbm2ddl_auto: create-drop
+      show_sql: true
+      format_sql: true
+---
+spring:
+  profiles: production
+
+  thymeleaf:
+    cache: true
+
+config:
+  server:
+    host: 10.123.123.1
+    port: 9090
+  database:
+    name: app_production
+    username: root
+    password: root
+    driver: com.mysql.jdbc.Driver
+    hibernate:
+      dialect: org.hibernate.dialect.MySQLDialect
+      hbm2ddl_auto:
+      show_sql: false
+      format_sql: false

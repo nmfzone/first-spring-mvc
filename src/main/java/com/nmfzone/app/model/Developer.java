@@ -22,84 +22,88 @@ public class Developer implements Serializable
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     @Column(name="id")
-	private long id;
+    private long id;
+    
     @Column(name="firstName")
-	private String firstName;
+    private String firstName;
+    
     @Column(name="lastName")
-	private String lastName;
+    private String lastName;
+    
     @Column(name="email")
-	private String email;
-	@ManyToMany
-	private List<Skill> skills;
+    private String email;
+    
+    @ManyToMany
+    private List<Skill> skills;
 
     public Developer() {}
 
-	public Developer(String firstName, String lastName, String email, List<Skill> skills)
+    public Developer(String firstName, String lastName, String email, List<Skill> skills)
     {
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.email = email;
-		this.skills = skills;
-	}
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.skills = skills;
+    }
 
-	public long getId()
+    public long getId()
     {
-		return id;
-	}
+        return id;
+    }
 
-	public void setId(long id)
+    public void setId(long id)
     {
-		this.id = id;
-	}
+        this.id = id;
+    }
 
-	public String getFirstName()
+    public String getFirstName()
     {
-		return firstName;
-	}
+        return firstName;
+    }
 
-	public void setFirstName(String firstName)
+    public void setFirstName(String firstName)
     {
-		this.firstName = firstName;
-	}
+        this.firstName = firstName;
+    }
 
-	public String getLastName()
+    public String getLastName()
     {
-		return lastName;
-	}
+        return lastName;
+    }
 
-	public void setLastName(String lastName)
+    public void setLastName(String lastName)
     {
-		this.lastName = lastName;
-	}
+        this.lastName = lastName;
+    }
 
-	public String getEmail()
+    public String getEmail()
     {
-		return email;
-	}
+        return email;
+    }
 
-	public void setEmail(String email)
+    public void setEmail(String email)
     {
-		this.email = email;
-	}
+        this.email = email;
+    }
 
-	public List<Skill> getSkills()
+    public List<Skill> getSkills()
     {
-		return skills;
-	}
+        return skills;
+    }
 
-	public void setSkills(List<Skill> skills)
+    public void setSkills(List<Skill> skills)
     {
-		this.skills = skills;
-	}
+        this.skills = skills;
+    }
 
-	public boolean hasSkill(Skill skill)
+    public boolean hasSkill(Skill skill)
     {
-		for (Skill containedSkill: getSkills()) {
-			if (containedSkill.getId() == skill.getId()) {
-				return true;
-			}
-		}
-		return false;
-	}
+        for (Skill containedSkill: getSkills()) {
+            if (containedSkill.getId() == skill.getId()) {
+                return true;
+            }
+        }
+        return false;
+    }
 
 }

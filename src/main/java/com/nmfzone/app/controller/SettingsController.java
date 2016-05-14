@@ -1,21 +1,26 @@
 package com.nmfzone.app.controller;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.boot.autoconfigure.web.ErrorController;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
 
-@RestController
-public class SettingsController implements ErrorController {
+@Controller
+public class SettingsController implements ErrorController
+{
 
     private static final String PATH = "/error";
 
     @RequestMapping(value = PATH)
-    public String error() {
-        return "Error handling";
+    public String error(Model model)
+    {
+        model.addAttribute("title", "Page not found");
+        return "errors/404";
     }
 
     @Override
-    public String getErrorPath() {
+    public String getErrorPath()
+    {
         return PATH;
     }
 

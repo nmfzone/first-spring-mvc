@@ -1,4 +1,7 @@
 {
-  "directory": "src/main/resources/static/assets/vendor",
-  "strict-ssl": false
+  "directory": "frontend/assets/vendor",
+  "strict-ssl": false,
+  "ignoredDependencies": [
+    "bootstrap-sass"
+  ]
 }

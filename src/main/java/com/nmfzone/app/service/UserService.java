@@ -1,45 +1,21 @@
 package com.nmfzone.app.service;
 
+import java.io.Serializable;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-
-import com.nmfzone.app.dao.UserDao;
 import com.nmfzone.app.model.User;
 
-@Service("userService")
-@Transactional
-public class UserService implements IUserService
+public interface UserService extends Serializable
 {
 
-	@Autowired
-	private UserDao dao;
+	void create(User user);
 
-	public void saveUser(User user)
-	{
-		dao.saveUser(user);
-	}
+	List<User> getAll();
 
-	public List<User> getAllUser()
-	{
-		return dao.getAllUser();
-	}
+	void deleteById(Long userId);
 
-	public void deleteUserById(String id)
-	{
-		dao.deleteUserById(id);
-	}
+	User findById(Long userId);
 
-	public User findById(String id)
-	{
-		return dao.findById(id);
-	}
+	void update(User user);
 
-	public void updateUser(User user)
-	{
-		dao.updateUser(user);
-	}
-	
 }

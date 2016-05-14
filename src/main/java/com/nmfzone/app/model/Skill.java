@@ -19,9 +19,11 @@ public class Skill implements Serializable
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     @Column(name="id")
-	private long id;
+    private long id;
+    
     @Column(name="label")
     private String label;
+    
     @Column(name="description")
     private String description;
 
@@ -29,38 +31,38 @@ public class Skill implements Serializable
 
     public Skill(String label, String description)
     {
-		this.label = label;
-		this.description = description;
-	}
+        this.label = label;
+        this.description = description;
+    }
 
-	public long getId()
+    public long getId()
     {
-		return id;
-	}
+        return id;
+    }
 
-	public void setId(long id)
+    public void setId(long id)
     {
-		this.id = id;
-	}
+        this.id = id;
+    }
 
-	public String getLabel()
+    public String getLabel()
     {
-		return label;
-	}
+        return label;
+    }
 
-	public void setLabel(String label)
+    public void setLabel(String label)
     {
-		this.label = label;
-	}
+        this.label = label;
+    }
 
-	public String getDescription()
+    public String getDescription()
     {
-		return description;
-	}
+        return description;
+    }
 
-	public void setDescription(String description)
+    public void setDescription(String description)
     {
-		this.description = description;
-	}
+        this.description = description;
+    }
 
 }

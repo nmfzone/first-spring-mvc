@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title th:text="'Error 404 - ' + ${title}"></title>
+        <link th:href="@{/assets/css/bootstrap.min.css}" type="text/css" rel="stylesheet" />
+        <link th:href="@{/assets/css/404.css}" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+        <div id="outer">
+            <div id="container" class="container text-center">
+                    <h1>Oops.</h1>
+                    <h3>The page you were looking for doesn't exist</h3>
+                    <b><h4 th:text="${message}"></h4></b>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+{
+  "name": "spring-starter",
+  "version": "1.0.0",
+  "description": "An asset dependencies management of Spring Starter",
+  "main": " ",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nmfzone/first-spring-mvc.git"
+  },
+  "keywords": [
+    "Spring"
+  ],
+  "author": "Nabil Muhammad Firdaus",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nmfzone/first-spring-mvc/issues"
+  },
+  "devDependencies": {
+    "gulp": "~3.9.0",
+    "gulp-concat": "~2.4.3",
+    "gulp-flatten": "^0.2.0",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-jshint": "~1.9.0",
+    "gulp-sass": "~1.3.2",
+    "gulp-sourcemaps": "~1.3.0",
+    "gulp-util": "~3.0.2"
+  }
+}

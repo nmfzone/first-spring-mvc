@@ -1,47 +1,21 @@
 package com.nmfzone.app.dao;
 
+import java.io.Serializable;
 import java.util.List;
-
-import org.hibernate.Criteria;
-import org.hibernate.Query;
-import org.hibernate.criterion.Restrictions;
-import org.springframework.stereotype.Repository;
 
 import com.nmfzone.app.model.User;
 
-@Repository("userDao")
-public class UserDao extends AbstractDao implements IUserDao
+public interface UserDao extends Serializable
 {
 
-    public void saveUser(User user)
-    {
-		persist(user);
-	}
+    void create(User user);
 
-	@SuppressWarnings("unchecked")
-	public List<User> getAllUser()
-    {
-		Criteria criteria = getSession().createCriteria(User.class);
-		return (List<User>) criteria.list();
-	}
+    List<User> getAll();
 
-	public void deleteUserById(String id)
-    {
-		Query query = getSession().createSQLQuery("delete from user where id = :id");
-		query.setString("id", id);
-		query.executeUpdate();
-	}
+    void deleteById(Long id);
 
-	public User findById(String id)
-    {
-		Criteria criteria = getSession().createCriteria(User.class);
-		criteria.add(Restrictions.eq("id", id));
-		return (User) criteria.uniqueResult();
-	}
+    User findById(Long id);
 
-	public void updateUser(User user)
-    {
-		getSession().update(user);
-	}
+    void update(User user);
 
 }

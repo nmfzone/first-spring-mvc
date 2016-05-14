@@ -12,16 +12,16 @@ public abstract class AbstractDao
 
 	protected Session getSession()
 	{
-		return sessionFactory.getCurrentSession();
+            return sessionFactory.getCurrentSession();
 	}
 
 	public void persist(Object entity)
 	{
-		getSession().persist(entity);
+            getSession().persist(entity);
 	}
 
 	public void delete(Object entity)
 	{
-		getSession().delete(entity);
+            getSession().delete(entity);
 	}
 }

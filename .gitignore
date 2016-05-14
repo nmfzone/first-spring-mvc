@@ -1,4 +1,8 @@
 .gradle
 .project
 .classpath
+node_modules
 build
+frontend/assets/vendor
+/.nb-gradle/
+src/resources/application.yml

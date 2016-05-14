@@ -1,0 +1,23 @@
+root = true
+
+[*]
+indent_size = 2
+indent_style = space
+insert_final_newline = false
+charset = utf-8
+
+[*.{java,groovy,jade,html}]
+indent_size = 4
+indent_style = space
+trim_trailing_whitespace = true
+
+[{package.json,bower.json,.jscs.json}]
+indent_style = space
+indent_size = 2
+
+[*.sh]
+end_of_line = lf
+
+[*.yml]
+indent_style = space
+indent_size = 2
