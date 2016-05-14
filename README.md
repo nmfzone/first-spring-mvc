@@ -9,7 +9,8 @@ My First Web Applications using Java Spring + Hibernate + Gradle
 
 ### How to use
     1.  Clone this repository (i assume you know a little bit about git workflow)
-    2.  Setting up the database in `src/main/resources/application.properties`
+    2.  Setting up the database, by duplicate `src/main/resources/application_sample.yml`
+        into `application.yml`
     3.  Run `bower update`
     4.  Run `gradle bootRun` or `./gradlew bootRun`
     5.  Goto http://localhost:8080
